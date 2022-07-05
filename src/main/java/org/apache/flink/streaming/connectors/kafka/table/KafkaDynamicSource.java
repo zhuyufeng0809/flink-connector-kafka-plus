@@ -222,7 +222,7 @@ public class KafkaDynamicSource
                     watermarkStrategy = WatermarkStrategy.noWatermarks();
                 }
                 return execEnv.fromSource(
-                        kafkaSource, watermarkStrategy, "KafkaSource-" + tableIdentifier);
+                        kafkaSource, watermarkStrategy, "KafkaSource-" + tableIdentifier).setParallelism(2);
             }
 
             @Override
