@@ -108,6 +108,15 @@ public class KafkaConnectorOptions {
 
     public static final ConfigOption<Integer> SINK_PARALLELISM = FactoryUtil.SINK_PARALLELISM;
 
+    public static final ConfigOption<Integer> SCAN_PARALLELISM =
+            ConfigOptions.key("scan.parallelism")
+                    .intType()
+                    .noDefaultValue()
+                    .withDescription(
+                            "Defines a custom parallelism for the scan source. "
+                                    + "By default, if this option is not defined, the planner will derive the parallelism "
+                                    + "for each statement individually by also considering the global configuration.");
+
     // --------------------------------------------------------------------------------------------
     // Kafka specific options
     // --------------------------------------------------------------------------------------------

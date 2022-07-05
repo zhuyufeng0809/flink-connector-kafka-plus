@@ -1,6 +1,6 @@
 package org.apache.flink.streaming.connectors.kafka.catalog;
 
-public class KafkaDataType {
+public class MysqlDataType {
     public final static String MYSQL_TINYINT = "TINYINT";
     public final static String MYSQL_SMALLINT = "SMALLINT";
     public final static String MYSQL_TINYINT_UNSIGNED = "TINYINT UNSIGNED";
